@@ -1,0 +1,168 @@
+# Java & Spring Boot Interview Guide
+
+This repository contains a comprehensive list of Java and Spring Boot concepts, best practices, interview questions, and key differences to help you prepare for technical interviews or refresh your knowledge.
+
+---
+
+## Table of Contents
+
+- [Java Core Concepts](#java-core-concepts)
+- [Threads & Concurrency](#threads--concurrency)
+- [Collections & Internals](#collections--internals)
+- [Java Memory Model](#java-memory-model)
+- [Exception Handling](#exception-handling)
+- [Java 8 Features](#java-8-features)
+- [Database Concepts](#database-concepts)
+- [Interfaces & OOP](#interfaces--oop)
+- [Spring Boot](#spring-boot)
+- [Microservices Architecture](#microservices-architecture)
+- [Build Tools: Maven vs Gradle](#build-tools-maven-vs-gradle)
+- [Testing & Code Quality](#testing--code-quality)
+- [Common Web Vulnerabilities](#common-web-vulnerabilities)
+- [Advanced Questions & Notes](#advanced-questions--notes)
+
+---
+
+## Java Core Concepts
+
+- `GET` vs `@RequestMapping`
+- `@RestController` vs `@Controller`
+- Pagination approaches: `Pageable`, `offset`, `limit`
+- `String` vs `StringBuilder` vs `StringBuffer`
+- `equals()` and `hashCode()` contract
+- Variable Arguments (`varargs`)
+- `String[] args` vs `String... args` in `main` method
+- Static method call on null object: `Test obj = null; obj.staticMethod();`
+
+---
+
+## Threads & Concurrency
+
+- What is multithreading?
+- Thread life cycle: `NEW`, `RUNNABLE`, `BLOCKED`, `WAITING`, `TIMED_WAITING`, `TERMINATED`
+- Thread creation:
+  - `extends Thread`
+  - `implements Runnable`
+  - `implements Callable`
+  - Executor Framework
+- `volatile`, `transient`, `synchronized` usage
+- Java Memory Model (JMM)
+- `WeakHashMap`, memory leaks, and prevention tools (VisualVM, JProfiler)
+- `HashMap` vs `ConcurrentHashMap` vs `HashTable`
+
+---
+
+## Collections & Internals
+
+- How `HashMap` works internally
+- What is hashing?
+- `TreeSet` behavior with `null` values
+- Marker Interfaces and creating custom marker interfaces
+
+---
+
+## Java Memory Model
+
+- Heap vs Stack
+- Garbage Collection
+- Memory leaks and prevention strategies
+
+---
+
+## Exception Handling
+
+- What is exception handling?
+- Global exception handling using `@ControllerAdvice` and `@RestControllerAdvice`
+- `finally` block with `return` or `System.exit()`
+
+---
+
+## Java 8 Features
+
+- `Optional` class
+- Method References
+- Functional Interfaces (Can they be empty?)
+- Default and Static methods in interfaces
+- Why `private` methods in interfaces?
+- Diamond problem with default methods and resolution (`InterfaceA.super.method()`)
+
+---
+
+## Database Concepts
+
+- Joins vs Subqueries
+- `HAVING` vs `WHERE` clause
+- Views vs Tables
+- Stored Procedures vs Views
+- Clustered vs Non-clustered Index
+
+---
+
+## Interfaces & OOP
+
+- Abstract class vs Base class
+- Marker interface
+- Can we have a functional interface with no abstract methods?
+
+---
+
+## Spring Boot
+
+- Ways to create Spring Boot applications
+- `@RestController` vs `@Controller`
+- Spring Profiles
+- Spring Boot Actuator and its benefits
+- Global Exception Handling in Spring Boot
+- Dependency management and version conflict resolution
+
+---
+
+## Microservices Architecture
+
+- Components of Microservices
+- Circuit Breaker pattern
+- Fault Isolation / Fault Tolerance
+- REST API Design: Pagination, Filtering, Sorting
+
+---
+
+## Build Tools: Maven vs Gradle
+
+- Maven vs Gradle comparison
+- Maven build life cycle
+- Maven Plugin usage
+- `settings.xml` purpose
+
+---
+
+## Testing & Code Quality
+
+- Testing in Spring Boot (Unit, Integration)
+- Code coverage: Tools and steps
+- Performance Testing (e.g., JMeter, Gatling)
+
+---
+
+## Common Web Vulnerabilities
+
+- Common security vulnerabilities (e.g., XSS, CSRF, SQL Injection)
+- Best practices for secure coding
+
+---
+
+## Advanced Questions & Notes
+
+- Handling complex SQL queries using Spring Data JPA
+- WAR vs JAR and Embedded Containers
+- Advantages and disadvantages of Spring Boot with real-time examples
+
+---
+
+## Doubts & Clarifications
+
+- `transient` — Prevents field from being serialized
+- `volatile` — Ensures visibility of changes to variables across threads
+
+---
+
+Feel free to fork, clone, or suggest additions to this guide. This is an evolving reference!
