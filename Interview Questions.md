@@ -60,7 +60,8 @@ A comprehensive guide covering essential Java, Spring Boot, Microservices, and r
 - 📌 How `HashMap` works internally
 - 📌 What is hashing?
 - 📌 `TreeSet` behavior with `null`, e.g., `TreeSet.add(null)`
-- 📌 Marker Interface & Custom Marker Interfaces
+- 📌 Marker Interface & Custom Marker Interfaces.
+- 📌 Every time when we use lamba expressions does it create object as its anonymous class ?
 
 ---
 
