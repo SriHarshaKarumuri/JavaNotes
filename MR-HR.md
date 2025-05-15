@@ -1,12 +1,15 @@
 # Infosys HR Interview Questions (For 3 Years Experienced Candidate)
 
 ## 1. Tell me about yourself.
-**Sample Answer:**  
-I'm a software engineer with 3 years of experience in full-stack development, primarily working with Java, Spring Boot,
-and Angular. I’ve contributed to multiple enterprise-level projects, focusing on scalable architecture and clean code.
-My current role involves both development and client interaction, which has helped me improve my communication and
-problem-solving skills. I’m now looking to join Infosys to work on more diverse, global projects and grow in a structured,
-innovation-driven environment.
+  
+I'm Sriharsha Karumuri, from Visakhapatnam completed by Bachelors Degree in CSE and working as a Associate Engineer with 3 years of experience in java backend development in Virtusa Consulting Services, primarily working with Java, Spring Boot,
+and Microservices.
+
+---
+
+## -_- . Explain about your roles and responsibilities.
+My current role involves both development and maintenance, which has helped me improve my communication and
+problem-solving skills.
 
 ---
 
