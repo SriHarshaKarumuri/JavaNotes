@@ -2,26 +2,26 @@
 
 ## 1. Tell me about yourself.
   
-I'm Sriharsha Karumuri, from Visakhapatnam completed by Bachelors Degree in CSE and working as a Associate Engineer with 3 years of experience in java backend development in Virtusa Consulting Services, primarily working with Java, Spring Boot,
-and Microservices.
+My name is Sriharsha Karumuri, and I am from Visakhapatnam. I hold a Bachelor of Technology degree in Computer Science and Engineering. I am currently working as an Associate Engineer at Virtusa Consulting Services, where I have gained 3 years of professional experience in Java backend development. My core expertise lies in Java, Spring Boot, and Microservices architecture.
 
 ---
 
 ## -_- . Explain about your roles and responsibilities.
-My current role involves both development and maintenance, which has helped me improve my communication and
-problem-solving skills.
+In my current role as an Associate Engineer at Virtusa, I am involved in both development and maintenance activities. I have been actively contributing to the development of RESTful APIs for stateless end-to-end communication, primarily using Java and Spring Boot.
+
+I also take responsibility for ensuring code quality through unit testing and maintaining code coverage using Jacoco. Tools like Swagger are used for API documentation, and SonarQube is utilized to monitor code quality and technical debt. Additionally, I contribute to preparing technical documentation to support ongoing development and future maintenance efforts.
 
 ---
 
 ## 2. Why do you want to join Infosys?
-**Sample Answer:**  
-Infosys has a strong reputation for innovation, structured learning, and global exposure. I’m especially drawn to the company’s focus on digital transformation and sustainability. With my background in software development and a continuous learning mindset, I believe Infosys offers the right platform to grow technically and professionally while contributing to impactful projects.
+
+Infosys is a leading multinational IT services company with operations in over 50 countries. It serves global clients across various domains such as banking, healthcare, retail, telecom, and manufacturing. Joining Infosys would provide me with exposure to various projects and domains, allowing me to enhance my technical skills, adapt to different work cultures, and continuously grow. The company’s strong foundation in innovation, structured learning, and global collaboration makes it an ideal platform for both personal and professional development.
 
 ---
 
 ## 3. Why are you leaving your current job?
 **Sample Answer:**  
-My current role has been a great learning experience, but I’m now looking for a larger platform that offers more challenging projects, cross-functional collaboration, and long-term career growth. Infosys’ global presence and culture of continuous learning make it an ideal next step for me.
+I’ve had a great experience working at Virtusa, where I’ve learned a lot over the past 2.11 years. However, I’m now looking for new technologies and a platform that offers broader exposure to different domains and technologies. I believe Infosys can provide those opportunities, along with a well-structured growth path and a culture of continuous learning.
 
 ---
 
