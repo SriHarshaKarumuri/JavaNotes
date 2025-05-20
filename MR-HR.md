@@ -9,7 +9,7 @@ My name is Sriharsha Karumuri, and I am from Visakhapatnam. I hold a Bachelor of
 ## -_- . Explain about your roles and responsibilities.
 In my current role as an Associate Engineer at Virtusa, I am involved in both development and maintenance activities. I have been actively contributing to the development of RESTful APIs for stateless end-to-end communication, primarily using Java and Spring Boot.
 
-I also take responsibility for ensuring code quality through unit testing and maintaining code coverage using Jacoco. Tools like Swagger are used for API documentation, and SonarQube is utilized to monitor code quality and technical debt. Additionally, I contribute to preparing technical documentation to support ongoing development and future maintenance efforts.
+I also take responsibility for ensuring code quality through code quality,fixing bugs and maintaining code coverages using tools like Jacoco. Tools like Swagger are used for API documentation, and SonarQube is utilized to monitor code quality and technical debt. Additionally, I contribute to preparing technical documentation to support ongoing development and future maintenance efforts.
 
 ---
 
