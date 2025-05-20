@@ -1,8 +1,7 @@
 # MR and HR Interview Questions (For 3 Years Experienced Candidate).
 
 ## Contents
-- [☕ Java Core Concepts](#-java-core-concepts)
-- [Tell me about yourself](#-tell-me-about-yourself.)
+
 
 
 ## 1. Tell me about yourself.
