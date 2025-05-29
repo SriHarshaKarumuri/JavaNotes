@@ -186,15 +186,17 @@ A comprehensive guide covering essential Java, Spring Boot, Microservices, and r
 
 ---
 
-## 📌 Advanced Questions & Notes
+## Coding Questions and Solutions.
 
 ### We have List of Employes where in that we have emp id,emp name,List of departments so i need total number of employees working in the department using streams.
 
- Map<String, Long> departmentCounts = employees.stream()
+ `Map<String, Long> departmentCounts = employees.stream()
             .flatMap(emp -> emp.getDepartments().stream()) // flatten all departments
             .collect(Collectors.groupingBy(
                 dept -> dept, Collectors.counting() // count per department
-            ));
+            ));`
+
+---
 
 ## ❓ Doubts & Clarifications
 
