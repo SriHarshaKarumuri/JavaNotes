@@ -92,6 +92,8 @@ A comprehensive guide covering essential Java, Spring Boot, Microservices, and r
 - 🌱 Default vs Static methods in interfaces
 - 🌱 Diamond problem in default methods and resolution using `A.super.method()`
 - 🌱 `private` methods in interfaces
+- Explain about Functional Interfaces how many are there and there return types.
+- 
 
 ---
 
@@ -121,6 +123,14 @@ A comprehensive guide covering essential Java, Spring Boot, Microservices, and r
 - 🟢 Spring Boot Actuator: Monitoring, Metrics, Health
 - 🟢 Exception Handling with `@ControllerAdvice`
 - 🟢 Managing version conflicts in Maven
+- 🟢 What is Spring JPA
+- 🟢 Annotations of spring jpa
+- 🟢 WHat is logging and how to configure that
+- 🟢 How can you log the SQL queries
+- 🟢 What is Caching and how you will implement this
+- 🟢 What is Interceptor and how it works.
+- 🟢 What is AOP and annotations and how it works and implementation.
+- 
 
 ---
 
@@ -130,6 +140,10 @@ A comprehensive guide covering essential Java, Spring Boot, Microservices, and r
 - 🧩 Circuit Breaker pattern (Resilience4j/Hystrix)
 - 🧩 Fault Isolation / Fault Tolerance
 - 🧩 REST API design strategies
+- What is Rate Limiting and write a program on that
+- What is Kafka and how to configure and how it works with diff microservices.
+- How microservices communicate with each other.
+- 
 
 ---
 
@@ -171,6 +185,16 @@ A comprehensive guide covering essential Java, Spring Boot, Microservices, and r
 - 🧠 Real-time use cases and trade-offs
 
 ---
+
+## 📌 Advanced Questions & Notes
+
+### We have List of Employes where in that we have emp id,emp name,List of departments so i need total number of employees working in the department using streams.
+
+ Map<String, Long> departmentCounts = employees.stream()
+            .flatMap(emp -> emp.getDepartments().stream()) // flatten all departments
+            .collect(Collectors.groupingBy(
+                dept -> dept, Collectors.counting() // count per department
+            ));
 
 ## ❓ Doubts & Clarifications
 
