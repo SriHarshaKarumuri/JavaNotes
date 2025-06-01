@@ -120,6 +120,7 @@ A comprehensive guide covering essential Java, Spring Boot, Microservices, and r
 - Spring Boot built-in servers (e.g., Tomcat) – how to exclude or replace
 - Spring Boot Actuator – monitor health, set thresholds, uptime stats
 - Limitations / disadvantages of Spring Boot
+- Difference between REST API and Servlet API
 
 ---
 
@@ -136,6 +137,15 @@ A comprehensive guide covering essential Java, Spring Boot, Microservices, and r
 - Kafka basics and config
 - Feign Client, Load Balancing, Ribbon
 - Fault tolerance & retries
+- @EnableFeignClients and @EnableDiscoveryClient
+- Spring Cloud Netflix (Hystrix, Ribbon, Eureka)
+- Design e-commerce app using microservices (scenario-based)
+- Saga pattern, CQRS, Event Sourcing
+- Monitoring: Prometheus, Grafana
+- Centralized logging: ELK
+- Distributed tracing
+- CI/CD: Blue-Green, Canary deployments
+- Docker, Kubernetes, IaC (Terraform, Helm)
 
 ---
 
@@ -168,17 +178,6 @@ A comprehensive guide covering essential Java, Spring Boot, Microservices, and r
 ---
 
 ## 📌 Advanced Questions & Notes
-
-- @EnableFeignClients and @EnableDiscoveryClient
-- Spring Cloud Netflix (Hystrix, Ribbon, Eureka)
-- Difference between REST API and Servlet API
-- Design e-commerce app using microservices (scenario-based)
-- Saga pattern, CQRS, Event Sourcing
-- Monitoring: Prometheus, Grafana
-- Centralized logging: ELK
-- Distributed tracing
-- CI/CD: Blue-Green, Canary deployments
-- Docker, Kubernetes, IaC (Terraform, Helm)
 
 - JSON handling using `org.json`
 - Code: Print JSON using hardcoded org.json object
