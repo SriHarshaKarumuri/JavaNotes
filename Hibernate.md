@@ -273,17 +273,17 @@ Hibernate Validator is the reference implementation of Bean Validation API (JSR-
 
 ---
 
-### | **Design Pattern** | **Used In**                            | **Purpose**                                           |
-| ------------------ | -------------------------------------- | ----------------------------------------------------- |
-| Factory            | `SessionFactory`                       | Create `Session` objects                              |
-| Singleton          | `SessionFactory`                       | One instance for whole application                    |
-| Proxy              | Lazy loading of entities               | Delay data loading until needed                       |
-| Template Method    | Hibernate transaction/session handling | Define a framework and let client plug logic          |
-| DAO                | Your application layer                 | Abstract database interaction                         |
-| Decorator          | Interceptors, event listeners          | Extend entity behavior without altering original code |
-| Strategy           | Dialects, caching, fetching            | Choose algorithm dynamically                          |
-| Observer           | Hibernate event listeners              | Respond to lifecycle events (save, update, delete)    |
-| Builder            | Configuration, CriteriaBuilder         | Build complex configuration or queries step-by-step   |
+| Design Pattern      | Used In                        | Purpose                                               |
+|---------------------|-------------------------------|-------------------------------------------------------|
+| Factory             | `SessionFactory`               | Create `Session` objects                               |
+| Singleton           | `SessionFactory`               | One instance for whole application                     |
+| Proxy               | Lazy loading of entities       | Delay data loading until needed                        |
+| Template Method     | Hibernate transaction/session handling | Define a framework and let client plug logic        |
+| DAO                 | Your application layer         | Abstract database interaction                          |
+| Decorator           | Interceptors, event listeners  | Extend entity behavior without altering original code |
+| Strategy            | Dialects, caching, fetching    | Choose algorithm dynamically                           |
+| Observer            | Hibernate event listeners      | Respond to lifecycle events (save, update, delete)    |
+| Builder             | Configuration, CriteriaBuilder | Build complex configuration or queries step-by-step   |
 
 
 ##  Why Use Hibernate?
