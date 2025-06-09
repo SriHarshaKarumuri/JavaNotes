@@ -106,6 +106,7 @@ An XML file used to define database connection settings, entity class mappings, 
 In a one-to-many mapping, the parent entity holds a collection of child entities. You annotate the collection in the parent with @OneToMany and specify the mappedBy attribute indicating the field that owns the relationship in the child. The child entity has a @ManyToOne annotation with a @JoinColumn indicating the foreign key.
 
 For example, a Department entity has many Employee entities:
+```
 @Entity
 public class Department {
    @OneToMany(mappedBy = "department")
@@ -118,7 +119,7 @@ public class Employee {
    @JoinColumn(name = "dept_id")
    private Department department;
 }
-
+```
 ---
 
 
@@ -192,7 +193,7 @@ User.orders is the inverse side, and uses mappedBy = "user" to link back.
 - Instead of writing constructor from dto to entity by dto.setName(entity.getName) ......
 - We can use model mapper which maps easily by adding depencey in pom.xml
 - Then configure in Seperate Class
--```
+```
   @Configuration
 public class AppConfig {
     @Bean
