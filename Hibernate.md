@@ -183,6 +183,40 @@ User.orders is the inverse side, and uses mappedBy = "user" to link back.
 - Option 2: Use @JsonIgnore
 - This is a blunt but simple solution — just ignore one side during JSON serialization.
 
+---
+
+## What Is ModelMapper?
+- ModelMapper is a Java library that automatically maps data between objects — most commonly between:
+- Entities (from your database)
+- DTOs (used in APIs to send/receive data)
+- Instead of writing constructor from dto to entity by dto.setName(entity.getName) ......
+- We can use model mapper which maps easily by adding depencey in pom.xml
+- Then configure in Seperate Class
+-```
+  @Configuration
+public class AppConfig {
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
+}
+```
+- Use it in Service or Controller
+```
+@Autowired
+private ModelMapper modelMapper;
+
+public UserDTO convertToDto(User user) {
+    return modelMapper.map(user, UserDTO.class);
+}
+
+public User convertToEntity(UserDTO userDto) {
+    return modelMapper.map(userDto, User.class);
+}
+```
+
+
+
 ## What is @JoinColumn and @JoinTable?
 Answer:
 @JoinColumn is used to specify the foreign key column in the owning side of an association (typically many-to-one or one-to-one). It tells Hibernate which column holds the foreign key.
