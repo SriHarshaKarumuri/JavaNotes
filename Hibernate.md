@@ -134,6 +134,55 @@ private List<Employee> employees;
 
 ---
 
+## @JoinColumn and mappedBy Contract
+- we will be using JoinColumn at the owning side so
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+- we will be using mappedBy in the inverse side(oppsite) 
+    @OneToMany(mappedBy = "user")
+    private List<Order> orders;
+
+---
+
+## Bidirectional Relationships in JPA
+Bidirectional means both entities reference each other.
+```
+@Entity
+public class User {
+    @Id
+    private Long id;
+
+    private String name;
+
+    @OneToMany(mappedBy = "user")
+    private List<Order> orders;
+}
+
+@Entity
+public class Order {
+    @Id
+    private Long id;
+
+    private String product;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+}
+```
+Explanation:
+Order.user is the owning side (has the @JoinColumn).
+User.orders is the inverse side, and uses mappedBy = "user" to link back.
+
+- ### When Spring Boot uses Jackson to serialize a User to JSON, it includes:
+- ### User → List<Order> → each Order → User again → List<Order> ...
+- ### 🔄 This leads to stack overflow (infinite recursion).
+- ### Fix Infinite Recursion
+- ✅ Option 1: Use @JsonManagedReference and @JsonBackReference
+- Option 2: Use @JsonIgnore
+- This is a blunt but simple solution — just ignore one side during JSON serialization.
+
 ## What is @JoinColumn and @JoinTable?
 Answer:
 @JoinColumn is used to specify the foreign key column in the owning side of an association (typically many-to-one or one-to-one). It tells Hibernate which column holds the foreign key.
