@@ -187,6 +187,36 @@ List<Integer> numbers = List.of(1, 2, 3, 4, 5);
 Optional<Integer> max = numbers.stream().max(Integer::compareTo);
 max.ifPresent(System.out::println);  // Output: 5
 
+
+
+
+
+
+
+| 🔢 No. | 🔧 Stream/Java Method       | 🔌 Functional Interface      | 🧠 Main Method     | 🧾 Signature                        | 🔍 Meaning (Input → Output)              |
+|-------|-----------------------------|------------------------------|--------------------|--------------------------------------|------------------------------------------|
+| 1     | `filter()`                  | `Predicate<T>`              | `test()`           | `boolean test(T t)`                  | Takes T → returns boolean                |
+| 2     | `map()`                     | `Function<T, R>`            | `apply()`          | `R apply(T t)`                       | Takes T → returns R                      |
+| 3     | `flatMap()`                 | `Function<T, Stream<R>>`    | `apply()`          | `Stream<R> apply(T t)`              | Takes T → returns Stream<R>             |
+| 4     | `forEach()`                 | `Consumer<T>`               | `accept()`         | `void accept(T t)`                   | Takes T → returns nothing               |
+| 5     | `peek()`                    | `Consumer<T>`               | `accept()`         | `void accept(T t)`                   | Takes T → returns nothing               |
+| 6     | `reduce()`                  | `BinaryOperator<T>`         | `apply()`          | `T apply(T t1, T t2)`                | Takes T, T → returns T                  |
+| 7     | `sorted()`                  | `Comparator<T>`             | `compare()`        | `int compare(T o1, T o2)`            | Takes T, T → returns comparison int     |
+| 8     | `anyMatch()`                | `Predicate<T>`              | `test()`           | `boolean test(T t)`                  | Takes T → returns boolean               |
+| 9     | `allMatch()`                | `Predicate<T>`              | `test()`           | `boolean test(T t)`                  | Takes T → returns boolean               |
+| 10    | `noneMatch()`               | `Predicate<T>`              | `test()`           | `boolean test(T t)`                  | Takes T → returns boolean               |
+| 11    | `collect()`                 | `Function<T, K>` (internally)| `apply()`         | `K apply(T t)`                       | Takes T → returns K                     |
+| 12    | `mapToInt()`                | `ToIntFunction<T>`          | `applyAsInt()`     | `int applyAsInt(T t)`                | Takes T → returns int                   |
+| 13    | `generate()`                | `Supplier<T>`               | `get()`            | `T get()`                            | Takes nothing → returns T               |
+| 14    | `Optional.orElseGet()`      | `Supplier<T>`               | `get()`            | `T get()`                            | Takes nothing → returns T               |
+| 15    | `Map.forEach()`             | `BiConsumer<K, V>`          | `accept()`         | `void accept(K k, V v)`              | Takes K, V → returns nothing            |
+| 16    | `Map.compute()`             | `BiFunction<K, V, R>`       | `apply()`          | `R apply(K k, V v)`                  | Takes K, V → returns R                  |
+| 17    | `Map.merge()`               | `BiFunction<V, V, V>`       | `apply()`          | `V apply(V oldVal, V newVal)`        | Takes V, V → returns V                  |
+| 18    | `List.replaceAll()`         | `UnaryOperator<T>`          | `apply()`          | `T apply(T t)`                       | Takes T → returns T                     |
+
+
+
+
 ✅ Conclusion
 The Stream API is a powerful tool for processing collections in a functional programming style. By utilizing intermediate operations like filter, map, distinct, and terminal operations like collect, forEach, and reduce, you can write cleaner and more efficient Java code.
 
