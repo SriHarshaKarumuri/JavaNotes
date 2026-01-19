@@ -34,15 +34,36 @@ This document serves as a comprehensive guide to the **Spring Framework** includ
 
 The **Spring Framework** is a powerful framework used to develop Java-based enterprise applications. It provides comprehensive infrastructure support for developing Java applications.
 
-Spring Beans – Definition, Lifecycle, Scope & Qualifiers
-What is a Spring Bean?
-
-In Spring Boot, a bean is a Java object that is managed by the Spring container.
-Beans enable dependency injection, lifecycle management, and loose coupling.
-
 **@SpringBootApplication includes:**
 - @ComponentScan
 - Finds all annotated classes
+
+  # 🌱 Common Ways to Define Beans
+1. Using Annotations (Most Common)  
+- `@Component`  
+- `@Service`  
+- `@Repository`  
+- `@Controller`  
+- `@RestController`  
+
+We use `@Bean` annotation to manually define beans (e.g., `RestTemplate`).  
+
+We use `@Qualifier` to mention a name to a bean so that similar beans can be differentiated by names.  
+
+---
+
+# 🔄 Bean Lifecycle (Simplified)
+- Spring scans and finds bean definitions  
+- Bean is instantiated  
+- Dependencies are injected  
+- Bean is ready to use  
+- Bean is destroyed when application stops  
+
+---
+
+# 1️⃣ Spring Bean Lifecycle (Step by Step)
+
+### High-level flow
 
 **What is Beans** A Spring Bean is an object that is created, managed, and controlled by the Spring Framework.
 Spring uses beans to:
@@ -50,6 +71,131 @@ Spring uses beans to:
 - Manage dependencies between objects
 - Control object lifecycle (creation, initialization, destruction).
 - This enables Dependency Injection (DI) and makes applications loosely coupled, testable, and scalable—critical for microservices.
+
+Application starts
+  ↓ Spring container created
+  ↓ Beans discovered & instantiated
+  ↓ Dependencies injected 
+  ↓ Bean initialized 
+  ↓ Bean ready to use 
+  ↓ Application stops 
+  → Bean destroyed
+
+  
+### 1. Container Startup
+- Spring Boot creates an `ApplicationContext`  
+- Component scanning begins  
+
+### 2. Bean Definition Loading
+Spring identifies beans via:  
+- `@Component`, `@Service`, `@Repository`, `@Controller`  
+- `@Bean` methods  
+- XML (rare now)  
+
+### Dependency Injection
+Spring injects required dependencies:  
+- Constructor injection (**recommended**)  
+- Setter injection  
+- Field injection (**not recommended**)  
+
+@Service
+public class OrderService {
+    private final PaymentService paymentService;
+
+    public OrderService(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
+}
+
+BeanPostProcessor (Before Init)
+- Allows modifying beans before initialization
+- postProcessBeforeInitialization()
+Initialization
+Spring initializes the bean using:
+- @PostConstruct
+- InitializingBean
+- initMethod
+@PostConstruct
+public void init() {
+    System.out.println("Bean initialized");
+}
+
+## Bean Destruction ##
+When application shuts down:
+- @PreDestroy
+- DisposableBean
+- destroyMethod
+  
+@PreDestroy
+public void cleanup() {
+    System.out.println("Bean destroyed");
+}
+
+🧩 BeanDefinition Object
+Spring creates a BeanDefinition object:
+- Bean class
+- Scope
+- Constructor
+- Dependencies
+- Init/destroy methods
+📌 Bean Scope (Important in Microservices)
+| Scope | Meaning | 
+| singleton | One instance per application | 
+| prototype | New instance every request | 
+| request | One per HTTP request | 
+| session | One per HTTP session | 
+
+**We use @Scope with bean name to mention a scope:**
+@Scope("prototype")
+@Component
+public class TempObject { }
+- In Spring Boot, a bean is a Java object managed by the Spring container, used to enable dependency injection and lifecycle management.
+
+3️⃣ @Qualifier Explained (VERY IMPORTANT)
+🔹 Why @Qualifier is Needed
+When multiple beans of the same type exist, Spring gets confused.
+❌ Problem
+@Service
+public class PaypalPaymentService implements PaymentService { }
+
+@Service
+public class StripePaymentService implements PaymentService { }
+
+@Autowired
+private PaymentService paymentService;
+
+
+⚠️ Spring Error:
+NoUniqueBeanDefinitionException
+
+✅ Solution: Use @Qualifier
+@Autowired
+@Qualifier("paypalPaymentService")
+private PaymentService paymentService;
+
+✔ Explicitly tells Spring which bean to inject.
+
+🔹 Custom Qualifier Name
+@Service("paypal")
+public class PaypalPaymentService implements PaymentService { }
+
+@Autowired
+@Qualifier("paypal")
+private PaymentService paymentService;
+
+
+🔹 Qualifier with Constructor Injection (Best Practice)
+public OrderService(@Qualifier("stripe") PaymentService paymentService) {
+    this.paymentService = paymentService;
+}
+
+
+🔹 @Primary vs @Qualifier
+@Primary
+@Service
+public class StripePaymentService implements PaymentService { }
+
+Spring uses this by default unless a qualifier is specified.
 
 
 
