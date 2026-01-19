@@ -29,9 +29,32 @@ This document serves as a comprehensive guide to the **Spring Framework** includ
 
 ---
 
+
 ## 🔹 Introduction to Spring Framework
 
-The **Spring Framework** is a powerful framework used to develop Java-based enterprise applications. It provides comprehensive infrastructure support for developing Java applications. The key components of the Spring Framework are:
+The **Spring Framework** is a powerful framework used to develop Java-based enterprise applications. It provides comprehensive infrastructure support for developing Java applications.
+
+Spring Beans – Definition, Lifecycle, Scope & Qualifiers
+What is a Spring Bean?
+
+In Spring Boot, a bean is a Java object that is managed by the Spring container.
+Beans enable dependency injection, lifecycle management, and loose coupling.
+
+**@SpringBootApplication includes:**
+- @ComponentScan
+- Finds all annotated classes
+
+**What is Beans** A Spring Bean is an object that is created, managed, and controlled by the Spring Framework.
+Spring uses beans to:
+- Create objects for you
+- Manage dependencies between objects
+- Control object lifecycle (creation, initialization, destruction).
+- This enables Dependency Injection (DI) and makes applications loosely coupled, testable, and scalable—critical for microservices.
+
+
+
+
+**The key components of the Spring Framework are:**
 
 1. **Inversion of Control (IoC)**: Dependency Injection (DI) helps in decoupling components.
 2. **Aspect-Oriented Programming (AOP)**: Separation of concerns, like logging and transaction management.
